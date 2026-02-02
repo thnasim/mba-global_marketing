@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Marketing | MBA Spring 2026 | Daffodil International University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2c5282;
+            --accent: #c69749;
+            --accent-light: #d4a85a;
+            --bg-cream: #faf8f5;
+            --bg-warm: #f5f0e8;
+            --text-dark: #1a202c;
+            --text-muted: #4a5568;
+            --text-light: #718096;
+            --white: #ffffff;
+            --shadow: 0 4px 20px rgba(26, 54, 93, 0.08);
+            --shadow-hover: 0 8px 30px rgba(26, 54, 93, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, #2d3748 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(198, 151, 73, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(198, 151, 73, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            padding: 2rem;
+            max-width: 900px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .university-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .university-badge img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .university-badge span {
+            color: var(--white);
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: var(--white);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+            display: block;
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .hero-meta-item {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-meta-item svg {
+            width: 18px;
+            height: 18px;
+            color: var(--accent);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-btn.primary {
+            background: var(--accent);
+            color: var(--primary);
+            border: 2px solid var(--accent);
+        }
+
+        .cta-btn.primary:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(198, 151, 73, 0.3);
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-btn.secondary:hover {
+            border-color: var(--white);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .scroll-indicator svg {
+            width: 30px;
+            height: 30px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(26, 54, 93, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 2rem;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            color: var(--white);
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .about-card {
+            background: var(--bg-cream);
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
+        .about-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-icon svg {
+            width: 28px;
+            height: 28px;
+            color: var(--white);
+        }
+
+        .about-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .about-card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* Professor Section */
+        .professor-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg-cream) 100%);
+        }
+
+        .professor-card {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        @media (max-width: 900px) {
+            .professor-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .professor-image {
+            position: relative;
+        }
+
+        .professor-image-frame {
+            width: 280px;
+            height: 350px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 20px;
+            padding: 8px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .professor-image-frame::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px solid var(--accent);
+            border-radius: 25px;
+            opacity: 0.5;
+        }
+
+        .professor-image-inner {
+            width: 100%;
+            height: 100%;
+            background: var(--bg-cream);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .professor-image-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .professor-placeholder {
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .professor-placeholder svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .professor-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .professor-title {
+            color: var(--accent);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .professor-bio {
+            color: var(--text-muted);
+            line-height: 1.9;
+            margin-bottom: 2rem;
+        }
+
+        .professor-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .credential-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-cream);
+            padding: 0.75rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            border: 1px solid rgba(26, 54, 93, 0.1);
+        }
+
+        .credential-badge svg {
+            width: 18px;
+            height: 18px;
+            color: var(--primary);
+        }
+
+        /* Students Section */
+        .students-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .students-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-tab:hover,
+        .filter-tab.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .students-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .student-card {
+            background: var(--bg-cream);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .student-card:nth-child(1) { animation-delay: 0.05s; }
+        .student-card:nth-child(2) { animation-delay: 0.1s; }
+        .student-card:nth-child(3) { animation-delay: 0.15s; }
+        .student-card:nth-child(4) { animation-delay: 0.2s; }
+        .student-card:nth-child(5) { animation-delay: 0.25s; }
+        .student-card:nth-child(6) { animation-delay: 0.3s; }
+        .student-card:nth-child(7) { animation-delay: 0.35s; }
+        .student-card:nth-child(8) { animation-delay: 0.4s; }
+
+        .student-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
+        .student-image {
+            height: 280px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .student-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(198, 151, 73, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .student-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .student-avatar {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .student-avatar svg {
+            width: 50px;
+            height: 50px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .student-content {
+            padding: 1.5rem;
+        }
+
+        .student-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .student-id {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .student-major {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.35rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .student-quote {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            font-style: italic;
+            border-left: 3px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+
+        .footer-links h4 {
+            font-size: 1rem;
+            margin-bottom: 1.25rem;
+            color: var(--accent);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .students-stats {
+                gap: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">MBA Spring 2026</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Course</a></li>
+                <li><a href="#professor">Professor</a></li>
+                <li><a href="#students">Students</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="university-badge">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Daffodil_International_University_logo.svg/200px-Daffodil_International_University_logo.svg.png" alt="DIU Logo" onerror="this.style.display='none'">
+                <span>Daffodil International University</span>
+            </div>
+            <h1>Global Marketing <span>& Principles of Marketing</span></h1>
+            <p class="hero-subtitle">Master the art of international business strategy and learn how companies market their products and services across global markets.</p>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    MBA Program
+                </div>
+                <div class="hero-meta-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    Spring 2026
+                </div>
+                <div class="hero-meta-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    38 Students
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="#students" class="cta-btn primary">Meet Our Cohort</a>
+                <a href="#about" class="cta-btn secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About The Course</span>
+                <h2 class="section-title">What You'll Learn</h2>
+                <p class="section-subtitle">Gain practical knowledge and skills to navigate the complexities of international marketing</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3>Global Market Strategies</h3>
+                    <p>Learn how to develop and implement marketing strategies that work across different countries, cultures, and economic environments. Understand market entry modes and expansion tactics.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3>Consumer Behavior</h3>
+                    <p>Explore how cultural, social, and psychological factors influence consumer decision-making across different markets. Learn to identify and respond to diverse customer needs.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+                    </div>
+                    <h3>International Branding</h3>
+                    <p>Master the art of building and managing brands that resonate with international audiences while maintaining brand consistency across diverse markets.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Understand modern digital marketing tactics including social media, content marketing, SEO, and online advertising strategies for global reach.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3>Market Analysis</h3>
+                    <p>Develop skills in analyzing market trends, competitive landscapes, and identifying opportunities for business growth in local and international markets.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3>Pricing & Competition</h3>
+                    <p>Learn pricing strategies for different markets, understand global competition dynamics, and develop competitive advantages for sustainable business success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professor Section -->
+    <section class="professor-section" id="professor">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Course Instructor</span>
+                <h2 class="section-title">Meet Your Professor</h2>
+                <p class="section-subtitle">Learn from an experienced educator and industry expert</p>
+            </div>
+            <div class="professor-card">
+                <div class="professor-image">
+                    <div class="professor-image-frame">
+                        <div class="professor-image-inner">
+                            <img src="images/Syed_Mizanur_Rahman.webp" alt="Professor Dr. Syed Mizanur Rahman">
+                        </div>
+                    </div>
+                </div>
+                <div class="professor-info">
+                    <h2>Professor Dr. Syed Mizanur Rahman</h2>
+                    <p class="professor-title">Associate Dean, Faculty of Business & Entrepreneurship</p>
+                    <p class="professor-bio">
+                        Professor Dr. Syed Mizanur Rahman is a distinguished academic leader serving as the Associate Dean of the Faculty of Business & Entrepreneurship (FBE) and Director of External Affairs at Daffodil International University (DIU). With over 16 years of dedicated service at DIU, he has made significant contributions to student mentorship, business education, and university development.
+                    </p>
+                    <p class="professor-bio">
+                        His expertise spans across marketing principles, global business strategies, and entrepreneurship development. As a life member of the Bangladesh Economic Association (BEA), he brings both academic rigor and practical insights to his teaching methodology.
+                    </p>
+                    <div class="professor-credentials">
+                        <div class="credential-badge">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                            16+ Years at DIU
+                        </div>
+                        <div class="credential-badge">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            Director, External Affairs
+                        </div>
+                        <div class="credential-badge">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                            BEA Life Member
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Students Section -->
+    <section class="students-section" id="students">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Cohort</span>
+                <h2 class="section-title">Meet the Students</h2>
+                <p class="section-subtitle">A diverse group of ambitious professionals pursuing excellence in global marketing</p>
+            </div>
+            
+            <div class="students-stats">
+                <div class="stat-item">
+                    <div class="stat-number">38</div>
+                    <div class="stat-label">Students</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Majors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Industries</div>
+                </div>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All Students</button>
+                <button class="filter-tab" data-filter="marketing">Marketing</button>
+                <button class="filter-tab" data-filter="digital-marketing">Digital Marketing</button>
+                <button class="filter-tab" data-filter="hrm">HRM</button>
+                <button class="filter-tab" data-filter="supply-chain">Supply Chain</button>
+                <button class="filter-tab" data-filter="finance">Finance</button>
+            </div>
+
+            <div class="students-grid">
+                <!-- Student 1 -->
+                <div class="student-card" data-major="international-business">
+                    <div class="student-image">
+                        <img src="images/Ahmed_Hasibul_Hasan.webp" alt="Ahmed Hasibul Hasan">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Ahmed Hasibul Hasan</h3>
+                        <p class="student-id">ID: 252-14-035</p>
+                        <span class="student-major">International Business</span>
+                        <p class="student-quote">"This is my last semester. I am interested to learn more about marketing tactics."</p>
+                    </div>
+                </div>
+
+                <!-- Student 2 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Adamu_Babawuro.webp" alt="Adamu Babawuro">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Adamu Babawuro</h3>
+                        <p class="student-id">ID: 253-14-039</p>
+                        <span class="student-major">Marketing</span>
+                        <p class="student-quote">"I expect to learn about global market strategies, consumer behavior, and how culture affects marketing decisions."</p>
+                    </div>
+                </div>
+
+                <!-- Student 3 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Mominur_Rahman.webp" alt="Mominur Rahman">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Mominur Rahman</h3>
+                        <p class="student-id">ID: 253-14-043</p>
+                        <span class="student-major">Marketing</span>
+                        <p class="student-quote">"This course will equip me with skills to understand global markets and manage cultural differences."</p>
+                    </div>
+                </div>
+
+                <!-- Student 4 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Ashiq.webp" alt="Ashiq">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Ashiq</h3>
+                        <p class="student-id">ID: 253-14-017</p>
+                        <span class="student-major">Marketing</span>
+                        <p class="student-quote">"Working in Textile sector for 10 years, I expect to learn practical global marketing strategies for the industry."</p>
+                    </div>
+                </div>
+
+                <!-- Student 5 -->
+                <div class="student-card" data-major="supply-chain">
+                    <div class="student-image">
+                        <img src="images/Rasel_Ahmed_Shakil.webp" alt="Rasel Ahmed Shakil">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Rasel Ahmed Shakil</h3>
+                        <p class="student-id">ID: 251-14-019</p>
+                        <span class="student-major">Supply Chain Management</span>
+                        <p class="student-quote">"I expect this course to help me understand how marketing connects with supply chain efficiency."</p>
+                    </div>
+                </div>
+
+                <!-- Student 6 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Md_Yeaman_Hasan.webp" alt="Md. Yeaman Hasan">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Md. Yeaman Hasan</h3>
+                        <p class="student-id">ID: 253-14-035</p>
+                        <span class="student-major">MBA</span>
+                        <p class="student-quote">"My expectation is to gain practical management skills and use them to build a strong corporate career."</p>
+                    </div>
+                </div>
+
+                <!-- Student 7 -->
+                <div class="student-card" data-major="hrm">
+                    <div class="student-image">
+                        <img src="images/Prity_Ali.webp" alt="Prity Ali">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Prity Ali</h3>
+                        <p class="student-id">ID: 261-14-037</p>
+                        <span class="student-major">HRM</span>
+                        <p class="student-quote">"As a CSE graduate working at DIU's Career Development Center, marketing knowledge supports effective employer branding."</p>
+                    </div>
+                </div>
+
+                <!-- Student 8 -->
+                <div class="student-card" data-major="digital-marketing">
+                    <div class="student-image">
+                        <img src="images/Laboni_Akter_Jhorna.webp" alt="Laboni Akter Jhorna">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Laboni Akter Jhorna</h3>
+                        <p class="student-id">ID: 252-14-038</p>
+                        <span class="student-major">Digital Marketing</span>
+                        <p class="student-quote">"I want to enhance my marketing skills as it aligns perfectly with my future career plans in marketing."</p>
+                    </div>
+                </div>
+
+                <!-- Student 9 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Montasir_Mahmud_Abir.webp" alt="Montasir Mahmud Abir">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Montasir Mahmud Abir</h3>
+                        <p class="student-id">ID: 261-14-044</p>
+                        <span class="student-major">Marketing</span>
+                        <p class="student-quote">"Graduated from BGMEA University of Fashion and Technology. I want to be knowledgeable in marketing."</p>
+                    </div>
+                </div>
+
+                <!-- Student 10 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Afra_Ebnath_Maesha.webp" alt="Afra Ebnath Maesha">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Afra Ebnath Maesha</h3>
+                        <p class="student-id">ID: 253-14-046</p>
+                        <span class="student-major">MBA</span>
+                        <p class="student-quote">"Working in education consultancy, this course helps me understand global market trends and international strategies."</p>
+                    </div>
+                </div>
+
+                <!-- Student 11 -->
+                <div class="student-card" data-major="supply-chain">
+                    <div class="student-image">
+                        <img src="images/Arman_Al_Farabi.webp" alt="Arman Al Farabi">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Arman Al Farabi</h3>
+                        <p class="student-id">ID: 261-14-054</p>
+                        <span class="student-major">Supply Chain Management</span>
+                        <p class="student-quote">"I have a strong interest in expanding my knowledge in supply chain and marketing."</p>
+                    </div>
+                </div>
+
+                <!-- Student 12 -->
+                <div class="student-card" data-major="digital-marketing">
+                    <div class="student-image">
+                        <img src="images/Easmin_Akter_Munmun.webp" alt="Easmin Akter Munmun">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Easmin Akter Munmun</h3>
+                        <p class="student-id">ID: 252-14-034</p>
+                        <span class="student-major">Digital Marketing</span>
+                        <p class="student-quote">"I hope to learn about global marketing strategies, consumer behavior, and impact of culture on marketing."</p>
+                    </div>
+                </div>
+
+                <!-- Student 13 -->
+                <div class="student-card" data-major="hrm">
+                    <div class="student-image">
+                        <img src="images/Md_Imranul_Islam_Robin.webp" alt="Md Imranul Islam Robin">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Md Imranul Islam Robin</h3>
+                        <p class="student-id">ID: 252-14-026</p>
+                        <span class="student-major">HRM</span>
+                        <p class="student-quote">"This is my last semester. I want to learn how businesses operate and compete in the global market."</p>
+                    </div>
+                </div>
+
+                <!-- Student 14 -->
+                <div class="student-card" data-major="digital-marketing">
+                    <div class="student-image">
+                        <img src="images/Md_Tanvir_Hasan.webp" alt="Tanvir Hasan">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Tanvir Hasan</h3>
+                        <p class="student-id">ID: 253-14-004</p>
+                        <span class="student-major">Digital Marketing</span>
+                        <p class="student-quote">"I run a creative design business. I want to learn practical global marketing strategies to reach international clients."</p>
+                    </div>
+                </div>
+
+                <!-- Student 15 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Ariba_Bushra.webp" alt="Ariba Bushra">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Ariba Bushra</h3>
+                        <p class="student-id">ID: 261-14-058</p>
+                        <span class="student-major">Real Estate</span>
+                        <p class="student-quote">"I expect to understand how culture affects consumer behavior and how global brands manage marketing challenges."</p>
+                    </div>
+                </div>
+
+                <!-- Student 16 -->
+                <div class="student-card" data-major="supply-chain">
+                    <div class="student-image">
+                        <img src="images/Alif_Al_Ismam.webp" alt="Alif Al Ismam">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Alif Al Ismam</h3>
+                        <p class="student-id">ID: 253-14-016</p>
+                        <span class="student-major">Supply Chain Management</span>
+                        <p class="student-quote">"I am taking this course to gain practical knowledge about global marketing strategies and market behavior."</p>
+                    </div>
+                </div>
+
+                <!-- Student 17 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/MEHEDI_HASAN.webp" alt="Mehedi Hasan Jibon">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Mehedi Hasan Jibon</h3>
+                        <p class="student-id">ID: 261-14-018</p>
+                        <span class="student-major">Marketing</span>
+                        <p class="student-quote">"First semester majoring in marketing. Learning to bring products/services to market and manage brands."</p>
+                    </div>
+                </div>
+
+                <!-- Student 18 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Tanvir_Hossen.webp" alt="Tanvir Hossen">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Tanvir Hossen</h3>
+                        <p class="student-id">ID: 252-14-013</p>
+                        <span class="student-major">MBA</span>
+                        <p class="student-quote">"This is my last semester. I am interested to learn international buyer behavior and global marketing."</p>
+                    </div>
+                </div>
+
+                <!-- Student 19 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Nasim_Uddin.webp" alt="Nasim Uddin">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Nasim Uddin</h3>
+                        <p class="student-id">ID: 261-14-033</p>
+                        <span class="student-major">Marketing</span>
+                        <p class="student-quote">"I want to gain knowledge about marketing in the digital era and understand consumer behavior."</p>
+                    </div>
+                </div>
+
+                <!-- Student 20 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Mehrab_Momen_khan_Lithel.webp" alt="Mehrab Momen Khan Lithel">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Mehrab Momen Khan Lithel</h3>
+                        <p class="student-id">ID: 261-14-036</p>
+                        <span class="student-major">MBA</span>
+                        <p class="student-quote">"I want to explore how marketing approaches vary across countries and how cultural differences shape consumer behavior."</p>
+                    </div>
+                </div>
+
+                <!-- Student 21 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Rashidul_Islam_Limon.webp" alt="S.M Rashidul Islam Limon">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">S.M Rashidul Islam Limon</h3>
+                        <p class="student-id">ID: 261-14-019</p>
+                        <span class="student-major">Marketing</span>
+                        <p class="student-quote">"First semester. I want to gain practical knowledge on how businesses are planned and grown in online and offline markets."</p>
+                    </div>
+                </div>
+
+                <!-- Student 22 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/shaery_sharmin.webp" alt="Shaery Sharmin">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Shaery Sharmin</h3>
+                        <p class="student-id">ID: 252-14-020</p>
+                        <span class="student-major">MBA</span>
+                        <p class="student-quote">"I want to learn the strategy of marketing and how it connects globally."</p>
+                    </div>
+                </div>
+
+                <!-- Student 23 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/MD_Shakil_Sheikh.webp" alt="MD Shakil Sheikh">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">MD Shakil Sheikh</h3>
+                        <p class="student-id">ID: 261-14-053</p>
+                        <span class="student-major">Marketing</span>
+                        <p class="student-quote">"First semester majoring in Marketing. I expect this course to help me understand marketing fundamentals."</p>
+                    </div>
+                </div>
+
+                <!-- Student 24 -->
+                <div class="student-card" data-major="finance">
+                    <div class="student-image">
+                        <img src="images/Sultana_Sabikunnahar.webp" alt="Sultana Sabikunnahar">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Sultana Sabikunnahar</h3>
+                        <p class="student-id">ID: 252-14-004</p>
+                        <span class="student-major">Accounting</span>
+                        <p class="student-quote">"Last semester. My expectation is to gain practical marketing knowledge for my future career."</p>
+                    </div>
+                </div>
+
+                <!-- Student 25 -->
+                <div class="student-card" data-major="supply-chain">
+                    <div class="student-image">
+                        <img src="images/Titas_Khan.webp" alt="Titas Khan">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Titas Khan</h3>
+                        <p class="student-id">ID: 253-14-012</p>
+                        <span class="student-major">Supply Chain Management</span>
+                        <p class="student-quote">"Senior Executive Officer at Radiant Group Logistics. Expecting industry-oriented learning through real-life cases."</p>
+                    </div>
+                </div>
+
+                <!-- Student 26 -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Pinkey_Rani_Saha.webp" alt="Pinkey Rani Saha">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Pinkey Rani Saha</h3>
+                        <p class="student-id">ID: 252-14-XXX</p>
+                        <span class="student-major">MBA</span>
+                        <p class="student-quote">"Eager to learn global marketing principles and their applications."</p>
+                    </div>
+                </div>
+
+                <!-- Student 27 -->
+                <div class="student-card" data-major="digital-marketing">
+                    <div class="student-image">
+                        <img src="images/Jannatul_Ferdous_Kaya.webp" alt="Jannatul Ferdous Kaya">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Jannatul Ferdous Kaya</h3>
+                        <p class="student-id">ID: 261-14-049</p>
+                        <span class="student-major">Digital Marketing</span>
+                        <p class="student-quote">"First semester. Completed honors in Political Science from National University."</p>
+                    </div>
+                </div>
+
+                <!-- Student 28 -->
+                <div class="student-card" data-major="finance">
+                    <div class="student-image">
+                        <img src="images/Abhishek_Sarker.webp" alt="Abhishek Sarker">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Abhishek Sarker</h3>
+                        <p class="student-id">ID: 252-14-021</p>
+                        <span class="student-major">Finance</span>
+                        <p class="student-quote">"This course will help me identify customer needs, develop products, and understand international business culture."</p>
+                    </div>
+                </div>
+
+                <!-- Student 29 -->
+                <div class="student-card" data-major="digital-marketing">
+                    <div class="student-image">
+                        <img src="images/Al_Shahria_Joy.webp" alt="Al Shahria Joy Shesir">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Al Shahria Joy Shesir</h3>
+                        <p class="student-id">ID: 253-14-015</p>
+                        <span class="student-major">Digital Marketing</span>
+                        <p class="student-quote">"I want to increase my knowledge in the digital marketing sector."</p>
+                    </div>
+                </div>
+
+                <!-- NEW Student 30 - MD Asif Sazzad -->
+                <div class="student-card" data-major="finance">
+                    <div class="student-image">
+                        <img src="images/MD_Asif_Sazzad.webp" alt="MD Asif Sazzad">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">MD Asif Sazzad</h3>
+                        <p class="student-id">ID: 261-14-014</p>
+                        <span class="student-major">Finance</span>
+                        <p class="student-quote">"This is my 1st semester majoring in Finance. Eager to learn global marketing principles."</p>
+                    </div>
+                </div>
+
+                <!-- NEW Student 31 - Md Ripon -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Md_Ripon.webp" alt="Md Ripon">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Md Ripon</h3>
+                        <p class="student-id">ID: 261-14-057</p>
+                        <span class="student-major">Marketing</span>
+                        <p class="student-quote">"Working alongside studies. Interested in consumer behavior, branding, and modern marketing strategies."</p>
+                    </div>
+                </div>
+
+                <!-- NEW Student 32 - Aqib Islam -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Aqib_Islam.webp" alt="Aqib Islam">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Aqib Islam</h3>
+                        <p class="student-id">ID: 252-14-025</p>
+                        <span class="student-major">Marketing</span>
+                        <p class="student-quote">"Running a small business. Interested in enhancing my marketing skills for my future career plans."</p>
+                    </div>
+                </div>
+
+                <!-- NEW Student 33 - MD Selim Mondal (Supply Chain - ID: 251-14-026) -->
+                <div class="student-card" data-major="supply-chain">
+                    <div class="student-image">
+                        <img src="images/MD_Selim_Mondal.webp" alt="MD Selim Mondal">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">MD Selim Mondal</h3>
+                        <p class="student-id">ID: 251-14-026</p>
+                        <span class="student-major">Supply Chain Management</span>
+                        <p class="student-quote">"Last semester. Expecting to understand how marketing connects with supply chain efficiency and lean operations."</p>
+                    </div>
+                </div>
+
+                <!-- NEW Student 34 - Mst. Khadiza Akter -->
+                <div class="student-card" data-major="marketing">
+                    <div class="student-image">
+                        <img src="images/Mst_khadiza_Akter.webp" alt="Mst. Khadiza Akter">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Mst. Khadiza Akter</h3>
+                        <p class="student-id">ID: N/A</p>
+                        <span class="student-major">MBA</span>
+                        <p class="student-quote">"Eager to learn global marketing principles and strategies for my career development."</p>
+                    </div>
+                </div>
+
+                 <!-- NEW Student 35 - Mrittika Khan -->
+                <div class="student-card" data-major="HRM">
+                    <div class="student-image">
+                        <img src="images/Mrittika_Khan.webp" alt="Mrittika Khan">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Mrittika Khan</h3>
+                        <p class="student-id">ID: 253-14-036</p>
+                        <span class="student-major">HRM</span>
+                        <p class="student-quote">"I want to understand how business attract customers promote their products set price and compete in the market."</p>
+                    </div>
+                </div>
+
+                  <!-- NEW Student 36 - Jakaria Ashik -->
+                <div class="student-card" data-major="Marketing">
+                    <div class="student-image">
+                        <img src="images/Jakaria_Ashik.webp" alt="Jakaria Ashik">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Jakaria Ashik</h3>
+                        <p class="student-id">ID: 261-14-016</p>
+                        <span class="student-major">Marketing</span>
+                        <p class="student-quote">"This course help me understand the market and related things. I hope the course help me to build a good career."</p>
+                    </div>
+                </div>
+
+                <!-- NEW Student 37 - Md. Alif Hossain -->
+                <div class="student-card" data-major="digital-marketing">
+                    <div class="student-image">
+                        <img src="images/Alif_Hossain.webp" alt="Md. Alif Hossain">
+                    </div>
+                    <div class="student-content">
+                        <h3 class="student-name">Md. Alif Hossain</h3>
+                        <p class="student-id">ID: 251-14-051</p>
+                        <span class="student-major">Digital Marketing</span>
+                        <p class="student-quote">"Bridging brands and consumers through creative Digital Marketing"</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Global Marketing MBA</h3>
+                <p>Building future marketing leaders with global perspectives and strategic thinking at Daffodil International University.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Course</a></li>
+                    <li><a href="#professor">Professor</a></li>
+                    <li><a href="#students">Students</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>University</h4>
+                <ul>
+                    <li><a href="https://daffodilvarsity.edu.bd" target="_blank">DIU Website</a></li>
+                    <li><a href="#">Faculty of Business</a></li>
+                    <li><a href="#">MBA Program</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Global Marketing | MBA Spring 2026 | Daffodil International University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Filter functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const studentCards = document.querySelectorAll('.student-card');
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filter = tab.dataset.filter;
+
+                studentCards.forEach((card, index) => {
+                    const major = card.dataset.major;
+                    if (filter === 'all' || major === filter || 
+                        (filter === 'marketing' && (major === 'marketing' || major === 'international-business')) ||
+                        (filter === 'digital-marketing' && major === 'digital-marketing') ||
+                        (filter === 'hrm' && major === 'hrm') ||
+                        (filter === 'supply-chain' && major === 'supply-chain') ||
+                        (filter === 'finance' && (major === 'finance' || major === 'accounting'))) {
+                        card.style.display = 'block';
+                        card.style.animation = 'none';
+                        card.offsetHeight; // Trigger reflow
+                        card.style.animation = `fadeInUp 0.6s ease-out forwards`;
+                        card.style.animationDelay = `${(index % 8) * 0.05}s`;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
